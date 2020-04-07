@@ -44,30 +44,7 @@ int countElements(vector<int>& arr) {
     return count;
 }
 
-int count(vector<int>&arr)
-{
-    int count = 0;
-    int freq[1000];
-    unordered_map<int , int>m;
-    for(auto  i = 0; i < arr.size(); i++)
-    {
-        freq[arr[i]]++;
-    }
-    for(auto i = 0; i < 1000; i++)
-    {
-        if(freq[i] != 0)
-        m.insert(std::make_pair(i , freq[arr[i]] ));
-    }
-    for(auto i = 0; i < arr.size(); i++)
-    {
-        if(m.find(arr[i] + 1) != m.end())
-        {
-            count += m.at(arr[i]);
-        }
-    }
 
-    return count;
-}
 
 int main(void)
 {
